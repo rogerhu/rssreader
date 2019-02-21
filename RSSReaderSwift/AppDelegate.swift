@@ -45,7 +45,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func didAuthorize() -> Void {
         print(#file, #function)
-        GDUtility().getGDAuthToken("Hearsay", serverName: "https://localhost:2042")
-
     }
 }
