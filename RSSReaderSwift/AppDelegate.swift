@@ -8,7 +8,7 @@ import GD.Runtime
 
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, GDAuthTokenDelegate {
 
     var window: UIWindow?
     
@@ -45,7 +45,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func didAuthorize() -> Void {
         print(#file, #function)
-        GDUtility().getGDAuthToken("Hearsay", serverName: "https://localhost:2042")
+        let gdutility = GDUtility()
+        gdutility.gdAuthDelegate = self
+        gdutility.getGDAuthToken("Hearsay", serverName: "")
 
+    }
+    
+    public func onGDAuthTokenSuccess(_ gdAuthToken: String) {
+        print("succcess")
+        // send token to server to exchange
+    }
+    
+    func onGDAuthTokenFailure(_ authTokenError: Error) {
+        print("error")
     }
 }
