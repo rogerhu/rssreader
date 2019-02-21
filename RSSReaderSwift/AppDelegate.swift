@@ -5,6 +5,7 @@
 
 import UIKit
 import GD.Runtime
+import GD.AuthenticationToken
 
 
 @UIApplicationMain

@@ -89,7 +89,6 @@
 		62FE66421C662080004FDC0F /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		6D60458F203C90A500B4C64D /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		8B2533231DD0E6CD007BDE5D /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
-		A14B00A8221E477B0045E4E6 /* RSSReader-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RSSReader-Bridging-Header.h"; sourceTree = "<group>"; };
 		FA0833B21FAC8FD000686CAD /* ReadMe.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ReadMe.txt; sourceTree = SOURCE_ROOT; };
 		FB9F3B821E02FF590013E906 /* RSSReaderGDiOSDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RSSReaderGDiOSDelegate.swift; path = RSSReaderSwift/RSSReaderGDiOSDelegate.swift; sourceTree = SOURCE_ROOT; };
 		FB9F3BAC1E0434B30013E906 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -229,7 +228,6 @@
 				60C740201C0DB2D9005CCCDF /* Storyboard */,
 				599703041C58AF4200E4D693 /* ViewControllers */,
 				599703111C58AF5F00E4D693 /* Supporting Files */,
-				A14B00A8221E477B0045E4E6 /* RSSReader-Bridging-Header.h */,
 			);
 			name = RSSReaderSwift;
 			sourceTree = "<group>";
@@ -546,7 +544,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.good.example.sdk.rssreader;
 				PRODUCT_NAME = RSSReaderSwift;
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/RSSReader-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -566,7 +564,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.good.example.sdk.rssreader;
 				PRODUCT_NAME = RSSReaderSwift;
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/RSSReader-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
