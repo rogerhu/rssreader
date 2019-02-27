@@ -10,11 +10,11 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   GD:
-    :commit: 65fc54e9bfee2697f3bae63d6750b991be30b439
+    :commit: c49ba9da62064fe6a2e71032bc35382ab0646353
     :git: "git@gitlab.com:rogerhu/gd-framework.git"
 
 SPEC CHECKSUMS:
-  GD: 5d2c2e7fe010e5b6289491f9ab4b4fb0b16f0c78
+  GD: ee18f5ced0f11140b27474ac0d0388662b542f00
 
 PODFILE CHECKSUM: 84e85516316dcb1b89757dd1226e777d63c24808
 
