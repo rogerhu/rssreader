@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02A32928E8F00E416A919830 /* Pods_RSSReaderSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FC2A9A2BD5A6594641E8E4E /* Pods_RSSReaderSwift.framework */; };
 		3B71D3F11FD82AE300EFAF67 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B71D3E41FD82AE200EFAF67 /* InfoPlist.strings */; };
 		599702E41C58AEE900E4D693 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599702E21C58AEE900E4D693 /* AppDelegate.swift */; };
 		599702E51C58AEE900E4D693 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 599702E31C58AEE900E4D693 /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1FC2A9A2BD5A6594641E8E4E /* Pods_RSSReaderSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RSSReaderSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		202E896E1CE9B259006F7B80 /* GD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GD.framework; path = System/Library/Frameworks/GD.framework; sourceTree = SDKROOT; };
 		3B71D3E51FD82AE200EFAF67 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3B71D3E61FD82AE200EFAF67 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				609B1DB11C08915B003BFB75 /* LocalAuthentication.framework in Frameworks */,
 				609B1DAD1C08914B003BFB75 /* CoreLocation.framework in Frameworks */,
 				609B1DAB1C089145003BFB75 /* CoreData.framework in Frameworks */,
+				02A32928E8F00E416A919830 /* Pods_RSSReaderSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +208,7 @@
 				609B1D841C0887BA003BFB75 /* RSSReaderSwift */,
 				609B1D991C088802003BFB75 /* Frameworks */,
 				609B1D831C0887BA003BFB75 /* Products */,
+				C5C8F78FFEC5604B083F19F4 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -249,6 +253,7 @@
 				609B1DAE1C089157003BFB75 /* Security.framework */,
 				609B1DAC1C08914B003BFB75 /* CoreLocation.framework */,
 				609B1DAA1C089145003BFB75 /* CoreData.framework */,
+				1FC2A9A2BD5A6594641E8E4E /* Pods_RSSReaderSwift.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -262,6 +267,13 @@
 			name = Storyboard;
 			sourceTree = "<group>";
 		};
+		C5C8F78FFEC5604B083F19F4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -269,10 +281,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 609B1D941C0887BB003BFB75 /* Build configuration list for PBXNativeTarget "RSSReaderSwift" */;
 			buildPhases = (
+				DBA018E1AD64F4FAE6152F74 /* [CP] Check Pods Manifest.lock */,
 				609B1D7E1C0887BA003BFB75 /* Sources */,
 				609B1D7F1C0887BA003BFB75 /* Frameworks */,
 				609B1D801C0887BA003BFB75 /* Resources */,
 				8B3529CD1D9E8981006F688F /* Set read/write permissions for assets */,
+				76F0067B1FA2B523C70549FB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -346,6 +360,34 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		76F0067B1FA2B523C70549FB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RSSReaderSwift/Pods-RSSReaderSwift-resources.sh",
+				"${PODS_ROOT}/GD/Frameworks/GD.framework/Versions/A/Resources/GDAssets.bundle",
+				"${PODS_ROOT}/GD/FIPS_module/arm64.sdk",
+				"${PODS_ROOT}/GD/FIPS_module/armv7.sdk",
+				"${PODS_ROOT}/GD/FIPS_module/armv7s.sdk",
+				"${PODS_ROOT}/GD/FIPS_module/i386.sdk",
+				"${PODS_ROOT}/GD/FIPS_module/x86_64.sdk",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GDAssets.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/arm64.sdk",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/armv7.sdk",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/armv7s.sdk",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/i386.sdk",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/x86_64.sdk",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RSSReaderSwift/Pods-RSSReaderSwift-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		8B3529CD1D9E8981006F688F /* Set read/write permissions for assets */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -359,6 +401,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "ASSETPATH=\"$(find . -name '*.xcassets' -type d)\"\necho \"${ASSETPATH}\"\ncd $ASSETPATH\nchmod -R u+rw,g+rw,o+rw *";
+		};
+		DBA018E1AD64F4FAE6152F74 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RSSReaderSwift-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 

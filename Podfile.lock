@@ -1,0 +1,21 @@
+PODS:
+  - GD (5.0.0.78)
+
+DEPENDENCIES:
+  - "GD (from `git@gitlab.com:rogerhu/gd-framework.git`)"
+
+EXTERNAL SOURCES:
+  GD:
+    :git: "git@gitlab.com:rogerhu/gd-framework.git"
+
+CHECKOUT OPTIONS:
+  GD:
+    :commit: 65fc54e9bfee2697f3bae63d6750b991be30b439
+    :git: "git@gitlab.com:rogerhu/gd-framework.git"
+
+SPEC CHECKSUMS:
+  GD: 5d2c2e7fe010e5b6289491f9ab4b4fb0b16f0c78
+
+PODFILE CHECKSUM: 84e85516316dcb1b89757dd1226e777d63c24808
+
+COCOAPODS: 1.5.3
