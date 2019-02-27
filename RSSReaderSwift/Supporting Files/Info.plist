@@ -43,7 +43,7 @@
 	<key>GDConsoleLogger</key>
 	<string>GDFilterNone</string>
 	<key>GDLibraryMode</key>
-	<string>GDEnterprise</string>
+	<string>GDEnterpriseSimulation</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
