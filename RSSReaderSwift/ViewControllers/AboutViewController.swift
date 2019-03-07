@@ -77,6 +77,8 @@ class SWAboutViewController : UIViewController, GDAuthTokenDelegate {
         ssoHeaders["BB Token"] = goodToken
         ssoHeaders["app-id"] = kServiceID
         ssoHeaders["app-version"] = kServiceVersion
+        ssoHeaders["Accept"] = "application/json"
+        ssoHeaders["Content-Type"] = "application/json"
         
         doPost(urlString: "https://mydev.wellsfargo.com/AuthServicesInternal/Mobile/GenericServletSSO",
                parameters: nil,
