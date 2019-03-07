@@ -95,7 +95,6 @@ class RSSReaderGDiOSDelegate: NSObject, GDiOSDelegate {
     }
     
     func onAuthorized(_ anEvent: GDAppEvent) {
-        // Handle the Good Libraries not authorized event
         switch anEvent.code {
         case .errorNone :
             if (!hasAuthorized) {

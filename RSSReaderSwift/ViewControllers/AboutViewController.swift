@@ -7,6 +7,9 @@ import UIKit
 import GD.Runtime
 import GD.AuthenticationToken
 
+let kServiceID = "com.hearsaysystems.relatetest"
+let kServiceVersion = "1.0.0.0"
+
 class SWAboutViewController : UIViewController, GDAuthTokenDelegate {
     
     @IBOutlet weak var textView: UITextView!
@@ -42,13 +45,28 @@ class SWAboutViewController : UIViewController, GDAuthTokenDelegate {
         }
     }
     
-    @IBAction func getGoodToken(_ sender: Any) {
+    @IBAction func generateGoodToken(_ sender: Any) {
         activity.startAnimating()
         updateLogWith("- Generate Good Token.")
         
         let gdutility = GDUtility()
         gdutility.gdAuthDelegate = self
-        gdutility.getGDAuthToken("", serverName: "")
+        gdutility.getGDAuthToken("", serverName: getGDTokenServer())
+    }
+    
+    private func getGDTokenServer() -> String? {
+        let serviceProviders = GDiOS.sharedInstance().getServiceProviders(for: kServiceID,
+                                                                          andVersion: kServiceVersion,
+                                                                          andServiceType: .server)
+        guard serviceProviders.count > 0,
+            let appServer = serviceProviders.first?.serverCluster.first,
+            let server = appServer.server,
+            let port = appServer.port else {
+            updateLogWith("- No GD token app server found.")
+            return nil
+        }
+        let tokenLookupURL = "https://\(server):\(port)/api/lookupuser"
+        return tokenLookupURL
     }
     
     @IBAction func getSAMLToken(_ sender: Any) {
@@ -57,8 +75,8 @@ class SWAboutViewController : UIViewController, GDAuthTokenDelegate {
         
         var ssoHeaders = [String : String]()
         ssoHeaders["BB Token"] = goodToken
-        ssoHeaders["app-id"] = "com.hearsaysystems.relatetest"
-        ssoHeaders["app-version"] = "1.0.0.0"
+        ssoHeaders["app-id"] = kServiceID
+        ssoHeaders["app-version"] = kServiceVersion
         
         doPost(urlString: "https://mydev.wellsfargo.com/AuthServicesInternal/Mobile/GenericServletSSO",
                parameters: nil,
