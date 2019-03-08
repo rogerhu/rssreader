@@ -7,8 +7,8 @@ import UIKit
 import GD.Runtime
 import GD.AuthenticationToken
 
-let kServiceID = "com.hearsaysystems.relatetest"
-let kServiceVersion = "1.0.0.0"
+let kDefaultServiceID = "com.hearsaysystems.relatetest" // "com.good.gdservice.enterprise.directory"
+let kDefaultVersion = "1.0.0.0"
 
 class SWAboutViewController : UIViewController, GDAuthTokenDelegate {
     
@@ -17,6 +17,8 @@ class SWAboutViewController : UIViewController, GDAuthTokenDelegate {
     @IBOutlet weak var getGoodBtn: UIButton!
     @IBOutlet weak var activity: UIActivityIndicatorView!
     
+    var gdApplicationId = kDefaultServiceID
+    var gdApplicationVersion = kDefaultVersion
     var goodToken: String?
     var samlToken: String?
     
@@ -24,6 +26,12 @@ class SWAboutViewController : UIViewController, GDAuthTokenDelegate {
         super.viewWillAppear(animated)
         textView.text = " - GD SDK integration working fine. \n\n - Good authorization success."
         activity.isHidden = true
+        var nsDictionary: NSDictionary?
+        if let path = Bundle.main.path(forResource: "Info", ofType: "plist") {
+            nsDictionary = NSDictionary(contentsOfFile: path)
+        }
+        gdApplicationId = nsDictionary?.object(forKey: "GDApplicationID") as? String ?? kDefaultServiceID
+        gdApplicationVersion = nsDictionary?.object(forKey: "GDApplicationVersion") as? String ?? kDefaultVersion
     }
     
     @IBAction func close(_ sender: AnyObject) {
@@ -56,8 +64,8 @@ class SWAboutViewController : UIViewController, GDAuthTokenDelegate {
     }
     
     private func getGDTokenServer() -> String? {
-        let serviceProviders = GDiOS.sharedInstance().getServiceProviders(for: kServiceID,
-                                                                          andVersion: kServiceVersion,
+        let serviceProviders = GDiOS.sharedInstance().getServiceProviders(for: gdApplicationId,
+                                                                          andVersion: gdApplicationVersion,
                                                                           andServiceType: .server)
         guard serviceProviders.count > 0,
             let appServer = serviceProviders.first?.serverCluster.first,
@@ -76,8 +84,8 @@ class SWAboutViewController : UIViewController, GDAuthTokenDelegate {
         
         var ssoHeaders = [String : String]()
         ssoHeaders["BB Token"] = goodToken
-        ssoHeaders["app-id"] = kServiceID
-        ssoHeaders["app-version"] = kServiceVersion
+        ssoHeaders["app-id"] = gdApplicationId
+        ssoHeaders["app-version"] = gdApplicationVersion
         ssoHeaders["Accept"] = "application/json"
         ssoHeaders["Content-Type"] = "application/json"
         
