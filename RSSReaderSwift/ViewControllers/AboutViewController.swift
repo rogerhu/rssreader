@@ -18,6 +18,7 @@ class SWAboutViewController : UIViewController, GDAuthTokenDelegate {
     @IBOutlet weak var activity: UIActivityIndicatorView!
     
     var goodToken: String?
+    var samlToken: String?
     
     override open func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -83,10 +84,15 @@ class SWAboutViewController : UIViewController, GDAuthTokenDelegate {
         doPost(urlString: "https://mydev.wellsfargo.com/AuthServicesInternal/Mobile/GenericServletSSO",
                parameters: nil,
                customHeaders: ssoHeaders,
-               success: { (resp, data) in
+               success: { (resp, respData) in
                 DispatchQueue.main.async {
                     self.activity.stopAnimating()
                     self.updateLogWith("- SAML token generation succeeded.")
+                    if let responseDict = respData as? [String: AnyObject],
+                        let saml = responseDict["SAMLResponse"] as? String {
+                        self.updateLogWith("- SAML token = \(saml)")
+                        self.samlToken = saml
+                    }
                 }
         }) { (error) in
             DispatchQueue.main.async {
