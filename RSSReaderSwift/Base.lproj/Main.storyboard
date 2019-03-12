@@ -238,6 +238,10 @@
                                     <action selector="getSAMLToken:" destination="e3W-9O-GQb" eventType="touchUpInside" id="aYB-Jg-ogi"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="3Is-ff-6hZ">
+                                <rect key="frame" x="169" y="261" width="37" height="37"/>
+                                <color key="color" red="0.77000000000000002" green="0.10199999999999999" blue="0.085999999999999993" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K2x-ws-Qpd">
                                 <rect key="frame" x="16" y="306" width="343" height="200"/>
                                 <color key="tintColor" red="0.18823529410000001" green="0.46666666670000001" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -269,10 +273,6 @@ https://community.blackberry.com/community/gdn/support</string>
                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 </variation>
                             </textView>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="3Is-ff-6hZ">
-                                <rect key="frame" x="169" y="261" width="37" height="37"/>
-                                <color key="color" red="0.77000000000000002" green="0.10199999999999999" blue="0.085999999999999993" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.98431372549999996" green="0.98431372549999996" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -286,6 +286,7 @@ https://community.blackberry.com/community/gdn/support</string>
                             <constraint firstItem="3Is-ff-6hZ" firstAttribute="centerX" secondItem="80T-9W-hy1" secondAttribute="centerX" id="V1s-mr-31J"/>
                             <constraint firstItem="qXQ-3A-QfP" firstAttribute="leading" secondItem="A7X-wN-hqo" secondAttribute="leadingMargin" id="cm5-Sv-BL6"/>
                             <constraint firstItem="K2x-ws-Qpd" firstAttribute="centerY" secondItem="A7X-wN-hqo" secondAttribute="centerY" id="f1W-c7-DA9"/>
+                            <constraint firstItem="3Is-ff-6hZ" firstAttribute="top" secondItem="80T-9W-hy1" secondAttribute="bottom" constant="13" id="hcd-H0-TB6"/>
                             <constraint firstItem="K2x-ws-Qpd" firstAttribute="leading" secondItem="Ub9-tb-WOf" secondAttribute="leading" constant="16" id="o7j-8e-ZkY"/>
                             <constraint firstItem="Ub9-tb-WOf" firstAttribute="trailing" secondItem="K2x-ws-Qpd" secondAttribute="trailing" constant="16" id="z1I-cQ-ZUX"/>
                         </constraints>

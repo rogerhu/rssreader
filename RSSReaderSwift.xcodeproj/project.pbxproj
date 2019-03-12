@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31C2F6432238148D00DECB65 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C2F6422238148D00DECB65 /* Logger.swift */; };
 		3B71D3F11FD82AE300EFAF67 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B71D3E41FD82AE200EFAF67 /* InfoPlist.strings */; };
 		599702E41C58AEE900E4D693 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599702E21C58AEE900E4D693 /* AppDelegate.swift */; };
 		599702E51C58AEE900E4D693 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 599702E31C58AEE900E4D693 /* Assets.xcassets */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		202E896E1CE9B259006F7B80 /* GD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GD.framework; path = System/Library/Frameworks/GD.framework; sourceTree = SDKROOT; };
+		31C2F6422238148D00DECB65 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		3B71D3E51FD82AE200EFAF67 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3B71D3E61FD82AE200EFAF67 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		3B71D3E71FD82AE200EFAF67 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 			children = (
 				599702F61C58AF1200E4D693 /* Constants.swift */,
 				599702F91C58AF1200E4D693 /* Red Toolbar */,
+				31C2F6422238148D00DECB65 /* Logger.swift */,
 			);
 			name = Helpers;
 			path = RSSReaderSwift/Helpers;
@@ -380,6 +383,7 @@
 				FB9F3B831E02FF590013E906 /* RSSReaderGDiOSDelegate.swift in Sources */,
 				620E34771C6E3C9D00796C41 /* AboutViewController.swift in Sources */,
 				620E34791C6E3C9D00796C41 /* FeedViewController.swift in Sources */,
+				31C2F6432238148D00DECB65 /* Logger.swift in Sources */,
 				620E8F891C70C23300F13EBF /* FeedsViewController.swift in Sources */,
 				599702F31C58AF0400E4D693 /* RSSFeed.swift in Sources */,
 			);
