@@ -40,6 +40,7 @@
 		6D604590203C90A500B4C64D /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D60458F203C90A500B4C64D /* WebKit.framework */; };
 		6D604591203C90FA00B4C64D /* GD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 202E896E1CE9B259006F7B80 /* GD.framework */; };
 		8B2533241DD0E6CD007BDE5D /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B2533231DD0E6CD007BDE5D /* Entitlements.plist */; };
+		FA8C1DF748640D36EF5273E5 /* Pods_RSSReaderSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C08F2E7BC7C7BC80F3ADD0DB /* Pods_RSSReaderSwift.framework */; };
 		FB9F3B831E02FF590013E906 /* RSSReaderGDiOSDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9F3B821E02FF590013E906 /* RSSReaderGDiOSDelegate.swift */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +92,7 @@
 		62FE66421C662080004FDC0F /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		6D60458F203C90A500B4C64D /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		8B2533231DD0E6CD007BDE5D /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
+		C08F2E7BC7C7BC80F3ADD0DB /* Pods_RSSReaderSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RSSReaderSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA0833B21FAC8FD000686CAD /* ReadMe.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ReadMe.txt; sourceTree = SOURCE_ROOT; };
 		FB9F3B821E02FF590013E906 /* RSSReaderGDiOSDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RSSReaderGDiOSDelegate.swift; path = RSSReaderSwift/RSSReaderGDiOSDelegate.swift; sourceTree = SOURCE_ROOT; };
 		FB9F3BAC1E0434B30013E906 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				609B1DB11C08915B003BFB75 /* LocalAuthentication.framework in Frameworks */,
 				609B1DAD1C08914B003BFB75 /* CoreLocation.framework in Frameworks */,
 				609B1DAB1C089145003BFB75 /* CoreData.framework in Frameworks */,
+				FA8C1DF748640D36EF5273E5 /* Pods_RSSReaderSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +211,7 @@
 				609B1D841C0887BA003BFB75 /* RSSReaderSwift */,
 				609B1D991C088802003BFB75 /* Frameworks */,
 				609B1D831C0887BA003BFB75 /* Products */,
+				95E67905A5E4CADE8E92B95A /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -252,6 +256,7 @@
 				609B1DAE1C089157003BFB75 /* Security.framework */,
 				609B1DAC1C08914B003BFB75 /* CoreLocation.framework */,
 				609B1DAA1C089145003BFB75 /* CoreData.framework */,
+				C08F2E7BC7C7BC80F3ADD0DB /* Pods_RSSReaderSwift.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -265,6 +270,13 @@
 			name = Storyboard;
 			sourceTree = "<group>";
 		};
+		95E67905A5E4CADE8E92B95A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -272,10 +284,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 609B1D941C0887BB003BFB75 /* Build configuration list for PBXNativeTarget "RSSReaderSwift" */;
 			buildPhases = (
+				E5B27DDC6F796270A195A9D5 /* [CP] Check Pods Manifest.lock */,
 				609B1D7E1C0887BA003BFB75 /* Sources */,
 				609B1D7F1C0887BA003BFB75 /* Frameworks */,
 				609B1D801C0887BA003BFB75 /* Resources */,
 				8B3529CD1D9E8981006F688F /* Set read/write permissions for assets */,
+				16225C180BAF355436B5EB32 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -351,6 +365,34 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		16225C180BAF355436B5EB32 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RSSReaderSwift/Pods-RSSReaderSwift-resources.sh",
+				"${PODS_ROOT}/GD/Frameworks/GD.framework/Versions/A/Resources/GDAssets.bundle",
+				"${PODS_ROOT}/GD/FIPS_module/arm64.sdk",
+				"${PODS_ROOT}/GD/FIPS_module/armv7.sdk",
+				"${PODS_ROOT}/GD/FIPS_module/armv7s.sdk",
+				"${PODS_ROOT}/GD/FIPS_module/i386.sdk",
+				"${PODS_ROOT}/GD/FIPS_module/x86_64.sdk",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GDAssets.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/arm64.sdk",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/armv7.sdk",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/armv7s.sdk",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/i386.sdk",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/x86_64.sdk",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RSSReaderSwift/Pods-RSSReaderSwift-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		8B3529CD1D9E8981006F688F /* Set read/write permissions for assets */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -364,6 +406,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "ASSETPATH=\"$(find . -name '*.xcassets' -type d)\"\necho \"${ASSETPATH}\"\ncd $ASSETPATH\nchmod -R u+rw,g+rw,o+rw *";
+		};
+		E5B27DDC6F796270A195A9D5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RSSReaderSwift-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
